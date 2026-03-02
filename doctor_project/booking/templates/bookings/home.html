@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment System</title>
+</head>
+<body>
+
+<h1>Doctor Appointment System</h1>
+
+<a href="/appointment/">Book Appointment</a>
+
+<h2>Appointments</h2>
+
+{% for appointment in appointments %}
+<p>
+{{ appointment.patient.name }} -
+{{ appointment.doctor.name }} -
+{{ appointment.date }} -
+{{ appointment.time }}
+</p>
+{% empty %}
+<p>No appointments yet</p>
+{% endfor %}
+
+</body>
+</html>

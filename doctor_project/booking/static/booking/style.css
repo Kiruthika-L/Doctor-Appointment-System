@@ -1,0 +1,72 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    margin: 0;
+    padding: 0;
+}
+
+/* Center container */
+.container {
+    width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+}
+
+/* Links */
+a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    background: #45a049;
+}
+
+/* Form inputs */
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+input[type="submit"] {
+    background: #2196F3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0b7dda;
+}
+
+/* List styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #f2f2f2;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}

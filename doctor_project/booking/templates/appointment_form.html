@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{% static 'booking/style.css' %}">
+</head>
+<body>
+
+<div class="navbar">
+    Book Appointment
+</div>
+
+<div class="container">
+
+    <div class="card">
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <label>Patient Name:</label><br>
+            <input type="text" name="patient_name" required><br><br>
+
+            <label>Select Doctor:</label><br>
+            <select name="doctor" required>
+
+                {% for doctor in doctors %}
+                <option value="{{ doctor.id }}">
+                    Dr. {{ doctor.name }} - {{ doctor.specialization }}
+                </option>
+                {% endfor %}
+
+            </select><br><br>
+
+            <label>Date:</label><br>
+            <input type="date" name="date" required><br><br>
+
+            <label>Time:</label><br>
+            <input type="time" name="time" required><br><br>
+
+            <button type="submit" class="btn">
+                Book Appointment
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
